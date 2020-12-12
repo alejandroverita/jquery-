@@ -30,10 +30,13 @@
     </script>
     <script>
         $(document).ready(function(){ //se ejecuta despues de cargar la pagina
-        var z=document.getElementById("cerrar");
+        /*var z=document.getElementById("cerrar");
 
         z.addEventListener("click", cerrar_banner, false); //escucha click y llama a funcion cerrar banner
-    
+        */
+       
+        document.getElementById("cerrar").addEventListener("click", cerrar_banner, false);
+        
         });
 
         function cerrar_banner() {
