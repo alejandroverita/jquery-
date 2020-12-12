@@ -18,15 +18,27 @@
             //prepend agrega ANTES el texto en el mismo contenedor
         });
     </script>    
+    <script>
+        function validar() {
+            var n_usuario=document.getElementById("usuario").value;
+            if(n_usuario=="") {
+                $("#usuario").after("Rellena este campo, porfavor");
+            }
+        }
+    </script>
 
 </head>
 <body>
-    <div id = "contenedor">
-        <div id="errores" class="micontenedor">
-            <h2>Errores</h2>
-        </div>
+    <form action="" method="get">
 
+    <input name="" type="text" id="usuario"><br/>
 
-    </div>
+    <input name="" type="text" id="nombre"><br/>
+
+    <input name="" type="text" id="apellido"><br/>
+
+    <input type="button" value="Dale" onclick="validar()"><br/>
+    
+    </form>
 </body>
 </html>
