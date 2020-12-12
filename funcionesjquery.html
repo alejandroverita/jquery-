@@ -21,6 +21,15 @@
             width:350px;
             height:200px;
         }
+
+        #sustitucion{
+            float:left;
+            margin:15px;
+            width:350px;
+            height:20px;
+            font-size:36px;
+        }
+
     </style>
     
     <script 
@@ -37,6 +46,8 @@
        
         document.getElementById("cerrar").addEventListener("click", cerrar_banner, false);
         
+        document.getElementById("imagen1").addEventListener("click", carrito, false);
+
         });
 
         function cerrar_banner() {
@@ -44,7 +55,11 @@
             $("#banner").remove();
         }
 
-
+        function carrito (){
+            
+            $("#imagen1").replaceWith("<div id='sustitucion'>Agregado al carrito </div>");
+   
+        }
     </script>
     
 </head>
