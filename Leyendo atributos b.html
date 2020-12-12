@@ -35,8 +35,36 @@ td{
 }
 </style>
 
-<script src="Jquery/jquery-1.11.1.js"></script>
+<script     
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">
+</script>
+<script>
 
+//Se ejecuta cuando carga pag web
+$(document).ready(function(){
+	//$("a[href^='https://']").addClass("linkdestacacursos");
+
+	document.getElementById('cursos').addEventListener("click", resaltacursos, false);
+
+	document.getElementById('informacion').addEventListener('click', buscainformacion, false);
+});
+
+function resaltacursos(){
+
+	$(".ejemplos").removeClass("linkdestacacursos");
+	//destaca elemento de forma dinamica
+	$(".cursos").addClass("linkdestacacursos");
+}
+
+function buscainformacion(){
+
+	$(".cursos").removeClass("linkdestacacursos");
+
+
+	$(".ejemplos").addClass("linkdestacacursos");
+}
+
+</script>
 
 </head>
 
