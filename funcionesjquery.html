@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #banner{
+        background-color:#F00;
+        width:450px;
+        height:300px;
+        position:absolute; /*rompe flujo pag web y aparezca flotando*/
+        left:400px;
+        top:50px;
+        font-size:36px;
+        text-align:center;
+        }
+        img{
+            float:left;
+            margin:15px;
+            width:350px;
+            height:200px;
+        }
+    </style>
+    
+    <script 
+    
+    src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">
+    
+    </script>
+    <script>
+        $(document).ready(function(){ //se ejecuta despues de cargar la pagina
+        var z=document.getElementById("cerrar");
+
+        z.addEventListener("click", cerrar_banner, false); //escucha click y llama a funcion cerrar banner
+    
+        });
+
+        function cerrar_banner() {
+
+            $("#banner").remove();
+        }
+
+
+    </script>
+    
+</head>
+<body>
+    <body>
+        <div id='banner'>
+            Banner de prueba
+            <p id='cerrar'>Cerrar</p>
+        </div>
+        <div id='carrete'>
+            <img src="..\..\¿PORQUE SE PIERDEN POSICIONES EN GOOGLE.png" id="imagen1">
+            <img src="ultrasarro.png" id="imagen2">
+
+        </div>
+    </body>
+</body>
+</html>
