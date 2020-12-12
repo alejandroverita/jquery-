@@ -22,7 +22,7 @@
             height:200px;
         }
 
-        #sustitucion{
+        #imagen1, #imagen2{
             float:left;
             margin:15px;
             width:350px;
@@ -46,8 +46,15 @@
        
         document.getElementById("cerrar").addEventListener("click", cerrar_banner, false);
         
-        document.getElementById("imagen1").addEventListener("click", carrito, false);
+        var imagenes= document.querySelectorAll("#carrete img"); //devuelve un array
+        
+        for(var i=0; imagenes.length; i++){
 
+            imagenes[i].addEventListener("click", carrito, false);
+
+        }
+            
+    
         });
 
         function cerrar_banner() {
@@ -55,10 +62,18 @@
             $("#banner").remove();
         }
 
-        function carrito (){
+        function carrito (num){
+            if(num.target==imagen1){
+
+             $("#imagen1").replaceWith("<div id='imagen1'>Agregado al carrito </div>");
             
-            $("#imagen1").replaceWith("<div id='sustitucion'>Agregado al carrito </div>");
-   
+            }
+
+            if(num.target==imagen2){
+
+                $("#imagen2").replaceWith("<div id='imagen2'>Agregado al carrito </div>");
+
+            }
         }
     </script>
     
