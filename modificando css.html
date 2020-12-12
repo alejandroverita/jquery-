@@ -34,18 +34,76 @@ src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">
 
 $(document).ready(function(){
 
-	document.getElementById("aumenta1").addEventListener("click", aumentar, false);
+//identifica todos los elementos input del sitio web
+	var botones=document.querySelectorAll("input");//se almacena un array
+
+	for(var i=0; botones.length; i++){
+//llamara a ambas funciones pero en las condiciones de cada funcion hara solamente
+//disminuir o aumentar
+		botones[i].addEventListener("click", aumentar, false);
+		botones[i].addEventListener("click", disminuir, false);
+	}
+	//bucle for para mantenerlo a la escucha
+
+
+	/*document.getElementById("aumenta1").addEventListener("click", aumentar, false);
+
+	document.getElementById("disminuye1").addEventListener("click", disminuir, false);
+
+	document.getElementById("aumenta2").addEventListener("click", aumentar, false);
+
+	document.getElementById("disminuye2").addEventListener("click", disminuir, false);
+
+	document.getElementById("aumenta3").addEventListener("click", aumentar, false);
+
+	document.getElementById("disminuye3").addEventListener("click", disminuir, false);*/
 });
 
-function aumentar(){
-	
-	var tamDefecto=$("#noticia1").css("font-size"); //devuelve un string
+function aumentar(e){
+
+	var zonaActuacion;
+	//mira si el evento que se desencadena automat. fue el aumenta 1
+	if(e.target==aumenta1) {
+		zonaActuacion="#noticia1";
+	}
+
+	else if (e.target==aumenta2){
+		zonaActuacion="#noticia2";
+	}
+	else if(e.target==aumenta3){
+		zonaActuacion="#noticia3";
+	}
+
+	var tamDefecto=$(zonaActuacion).css("font-size"); //devuelve un string
 
 	//alert(tamDefecto);
 
+	tamDefecto=parseInt(tamDefecto); //convierte a entero
+
+	$(zonaActuacion).css("font-size", tamDefecto*1.25);
+
+}
+
+function disminuir(e){ //recibe como parametro la funcion del evento
+	
+	var zonaActuacion;
+	//mira si el evento que se desencadena automat. fue el aumenta 1
+	if(e.target==disminuye1) {
+		zonaActuacion="#noticia1";
+	}
+
+	else if (e.target==disminuye2){
+		zonaActuacion="#noticia2";
+	}
+	else if(e.target==disminuye3){
+		zonaActuacion="#noticia3";
+	}
+
+	var tamDefecto=$(zonaActuacion).css("font-size"); //devuelve un string
+
 	tamDefecto=parseInt(tamDefecto);
 
-	$("#noticia1").css("font-size", tamDefecto*1.25);
+	$(zonaActuacion).css("font-size", tamDefecto*0.90);
 
 }
 
