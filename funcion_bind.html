@@ -33,10 +33,36 @@ p{
 src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">
 </script>
 <script>
+//almacena en funcion ready para que se ejecute despues de cargar la pag
+$(document).ready(function(){
+	//identificar id imagen y guardar ruta con atributto attr
+	var v_img1=$("#imagen1").attr("src");
 
+	//identificar id del contenedor de la imagen y hace rque borre
+	//el border punteado al cargar pagina
 
+	$("#imagen_grande").hide();
 
+	//pasarle la ruta de la imagen al hacer clic con funcion BIND
+	//BIND(EVENTO, DATOS (VARIABLE), FUNCION)
+	$("#imagen1").bind("click", v_img1, abreimagen);
 
+});
+
+function abreimagen(){
+	//que apareza contenedor
+	$("#imagen_grande").fadeIn(1000);
+
+	//sustituir contenedor por la ruta de la imagen
+	//REEMPLACEWITH cambia un contenido HTML por otro usando JS
+	/*
+	e.data es una propiedad del evento. Data es la variable v_img1
+	que se almaceno en la funcion BIND.
+	El segundo parametro de la funcion BIND es DATA entonces se esta concedenando
+	con los DATOS del objeto EVENTO 
+	*/
+	$("#img_sustitucion").replaceWith("<img src='" + e.data + "' width='700' height='405'>");
+}
 	
 
 </script>
@@ -51,7 +77,7 @@ src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">
 <p>Donec nec pretium tellus. Cras volutpat eros a mi suscipit suscipit. Etiam sit amet sodales tellus. Nulla a odio volutpat, auctor orci at, bibendum eros. Integer suscipit velit eget venenatis varius. Suspendisse condimentum libero ut turpis placerat, eu cursus nisl pretium. Aenean condimentum iaculis felis, eu tristique neque porttitor sit amet.</p>
 <table border="0">
   <tr>
-    <td><img src="Curso JavaScript/imgs/paisaje1.JPG" width="150" height="100" id="imagen1"></td>
+    <td><img src="signomas.png" width="150" height="100" id="imagen1"></td>
     
   </tr>
 </table>
