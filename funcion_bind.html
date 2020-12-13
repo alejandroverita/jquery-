@@ -49,7 +49,11 @@ $(document).ready(function(){
 
 });
 
-function abreimagen(){
+function abreimagen(e){
+	//metodo STOPPROPAGATION evita que el evento se dispare a 
+	//otros OBJETOS que contengan en el que estoy
+	e.stopPropagation();
+
 	//que apareza contenedor
 	$("#imagen_grande").fadeIn(1000);
 
@@ -64,6 +68,10 @@ function abreimagen(){
 	$("#img_sustitucion").replaceWith("<img src='" + e.data + "' width='700' height='405'>");
 }
 	
+//para que se oculte con el CLICK o con alguna tecla 
+$(document).bind("click keypress", function(){
+	$("#imagen_grande").fadeOut(1000);
+});
 
 </script>
 </head>
