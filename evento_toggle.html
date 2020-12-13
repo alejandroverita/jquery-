@@ -66,7 +66,23 @@ src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">
 
 <script>
 
+$(document).ready(function(){
+	//se identifica el id del submenu que se quiere ocultar apenas
+	//carge la pagina
+	$("#submenu1").hide();
+//togle recibe dos fuciones de paramentros. Identificamos ID que 
+//queremos se almacene en memoria esa funcion
+	$("#Archivo").toggle(muestra_menu, oculta_menu);
+});
 
+//creamos funciones del toggle
+function muestra_menu(){
+	$("#submenu1").show();
+}
+
+function oculta_menu(){
+	$("#submenu1").hide();
+}
 
 
 
