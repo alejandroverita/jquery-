@@ -1,0 +1,78 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Documento sin título</title>
+<style>
+
+#imagenes{
+	width:1475px;
+	margin:auto;
+	
+}
+img{
+	padding:20px 30px;
+}
+
+#mensaje_img1 {
+	position: absolute;
+	left: 623px;
+	top: 392px;
+	width: 581px;
+	height: 215px;
+	background-color: #FF9;
+	font-size: 24px;
+	font-weight: bold;
+	padding: 25px;
+	border: dotted 2px #00F;
+}
+</style>
+
+<script 
+
+src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">
+
+</script>
+
+<script>
+
+$(document).ready(function(){
+
+	$("#mensaje_img1").hide();
+
+//hover tiene dos argumentos: la funcion cuando el mouse encima, y la 2da
+//la funcion cuando el mouse afuera
+
+	$("#imagen1").hover(function(){
+		$("#mensaje_img1").show();},
+		function(){$("#mensaje_img1").hide();
+	});
+
+});
+
+/*function mensaje_on (){
+	$("#mensaje_img1").show();
+}
+
+function mensaje_out(){
+	$("#mensaje_img1").hide();
+}*/
+
+
+</script>
+</head>
+
+<body>
+
+<div id="mensaje_img1">Preciosa encina en mitad de la meseta castellana......</div>
+<div id="imagenes">
+
+<img src="ultrasarro.png" id="imagen1">
+<img src="1-site-map.png" id="imagen2">
+<img src="¿PORQUE SE PIERDEN POSICIONES EN GOOGLE.png" id="imagen3">
+
+
+
+</div>
+</body>
+</html>
