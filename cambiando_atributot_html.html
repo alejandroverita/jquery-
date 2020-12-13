@@ -1,0 +1,80 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Documento sin título</title>
+<style>
+
+table{
+	text-align:center;
+	width:50%;
+	border:none;
+	margin:auto;
+}
+
+img{
+	padding:0 5px;
+}
+h1{
+	text-align:center;
+}
+
+</style>
+<script 
+
+src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">
+
+</script>
+
+<script>
+
+	$(document).ready(function(){
+    var elementos=document.querySelectorAll("img");
+    for (var i=0; i<elementos.length; i++){
+      elementos[i].addEventListener("mouseover", cambiar, false);
+      elementos[i].addEventListener("mouseout", restaurar, false);
+    }
+  })
+
+function cambiar (e){
+//si el objeto que desencadena el envento es igual a...
+  if(e.target==img1){
+    $("#img1").attr("src", "1-site-map.png");
+  }
+  else if (e.target==img2){
+    $("#img2").attr("src", "¿PORQUE SE PIERDEN POSICIONES EN GOOGLE.png");
+  }
+  else if (e.target==img3){
+    $("#img3").attr("src", "ultrasarro.png");
+  }
+
+}
+
+function restaurar (e){
+
+  if(e.target==img1){
+    $("#img1").attr("src", "¿PORQUE SE PIERDEN POSICIONES EN GOOGLE.png");
+  }
+  else if (e.target==img2){
+    $("#img2").attr("src", "ultrasarro.png");
+  }
+  else if (e.target==img3){
+    $("#img3").attr("src", "1-site-map.png");
+  }
+
+}
+
+</script>
+</head>
+
+<body>
+<h1>Galería de imágenes</h1>
+<table width="100%" border="0">
+  <tr>
+    <td><img src="¿PORQUE SE PIERDEN POSICIONES EN GOOGLE.png" id="img1" ></td>
+    <td><img src="ultrasarro.png" id="img2" ></td>
+    <td><img src="1-site-map.png" id="img3" ></td>
+  </tr>
+</table>
+</body>
+</html>
