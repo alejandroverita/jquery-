@@ -3,13 +3,35 @@
 <head>
 <meta charset="UTF-8">
 <title>Fotos con FancyBox</title>
-<link rel="stylesheet" href="css/site.css">
+<link rel="stylesheet" href="../css/site.css">
+
+<link rel="stylesheet" href="..\fancybox\jquery.fancybox-1.3.4.css"/>
+
+<script 
+
+src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js">
+
+</script>
+
+<script src="..\fancybox\jquery.fancybox-1.3.4.js"></script>
 
 
 <script>
 $(document).ready(function() {
 	
-	
+	$("#galeria a").fancybox({
+
+		overlayColor:"#797e79",
+		overlayOpacity: .6,
+		transitionIn: "elastic",
+		transitionOn:"elastic",
+
+		titlePosition:"Outside",
+
+		//bucle para que finalice y se repita la primera pag
+		cyclic:true
+
+	});
 
 });
 </script>
@@ -17,7 +39,7 @@ $(document).ready(function() {
 <body>
 
 <div class="cabecera">
-<img src="imgs/pildoras_1.png">
+<img src="../imgs/pildoras_1.png">
 	<p class="logo">Píldoras Informáticas </p>
 </div>
 
@@ -26,12 +48,12 @@ $(document).ready(function() {
 	<div class="principal">
 		<h1>Fotos</h1>
 		<div id="galeria">
-		<a href="imgs/paisaje1.JPG" rel="gallery" title="Bonito paisaje nocturno"><img src="imgs/paisaje1.JPG" width="70" height="70" alt="Paisaje nocturno"></a>
-		<a href="imgs/2.jpg" rel="gallery" title="Vacas pasando la vida"><img src="imgs/2.jpg" width="70" height="70" alt="vacas"></a>
-		<a href="imgs/paisaje2.jpg" rel="gallery" title="Palemeras al atradecer"><img src="imgs/paisaje2.jpg" width="70" height="70" alt="Palmeras"></a>
-		<a href="imgs/paisaje3.jpg" rel="gallery" title="Montañas"><img src="imgs/paisaje3.jpg" width="70" height="70" alt="Montañas"></a>
-		<a href="imgs/3.jpg" rel="gallery" title="Pico costero"><img src="imgs/3.jpg" width="70" height="70" alt="Pico"></a>
-		<a href="imgs/paisaje4.jpg" rel="gallery" title="Atradecer"><img src="imgs/paisaje4.jpg" width="70" height="70" alt="atardecer"></a></div>
+		<a href="../imgs/paisaje1.JPG" data-fanycbox="gallery" title="Bonito paisaje nocturno"><img src="../imgs/paisaje1.JPG" width="70" height="70" alt="Paisaje nocturno"></a>
+		<a href="../imgs/2.jpg" rel="gallery" title="Vacas pasando la vida"><img src="../imgs/2.jpg" width="70" height="70" alt="vacas"></a>
+		<a href="../imgs/paisaje2.jpg" rel="gallery" title="Palemeras al atradecer"><img src="../imgs/paisaje2.jpg" width="70" height="70" alt="Palmeras"></a>
+		<a href="../imgs/paisaje3.jpg" rel="gallery" title="Montañas"><img src="../imgs/paisaje3.jpg" width="70" height="70" alt="Montañas"></a>
+		<a href="../imgs/3.jpg" rel="gallery" title="Pico costero"><img src="../imgs/3.jpg" width="70" height="70" alt="Pico"></a>
+		<a href="../imgs/paisaje4.jpg" rel="gallery" title="Atradecer"><img src="../imgs/paisaje4.jpg" width="70" height="70" alt="atardecer"></a></div>
 	</div>
 </div>
 
