@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Documento sin título</title>
+<style>
+
+img{
+	opacity:0.5;
+}
+
+
+</style>
+<script 
+src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">
+</script>
+<script>
+
+$(document).ready(function() {
+
+	$("#imagen").click(function(){
+		//recibe parametros de CSS funcion ANIMATE
+		$(this).animate()
+
+	})
+
+});
+
+
+</script>
+</head>
+
+<body>
+<img src="signomas.png" width="300" height="200" id="imagen">
+
+</body>
+</html>
