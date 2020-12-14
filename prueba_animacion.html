@@ -27,6 +27,7 @@ $(document).ready(function() {
 	})*/
 
 	$("img").mouseover(function(){
+	//this hace referencia al propio objeto donde nos encontramos, osea img 
 		$(this).animate({
 			opacity:1
 		}, 250); //250milisegundos
@@ -35,7 +36,7 @@ $(document).ready(function() {
 	$("img").mouseout(function(){
 		$(this).animate({
 			opacity:0.5
-		}, 250);
+		}, 250); 
 	})
 
 });
