@@ -108,7 +108,19 @@ src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">
 
 </script>
 <script>
+//iniciamos el documento con la funcion ready. se ejecuta despues de cargar pagina
+$(document).ready(function(){
 
+	//el contenedor abierto quedara a la escucha del click y llamara a la funcion anonima
+	$("#abierto").click(function(){
+		//funcion descendiente con login form
+		$("#login form").slideToggle(300);
+		//toggle class para llamar un estilo
+		$(this).toggleClass("cerrado");
+
+	});
+
+});
 
 
 </script>
