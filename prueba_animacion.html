@@ -18,10 +18,24 @@ src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">
 
 $(document).ready(function() {
 
-	$("#imagen").click(function(){
+	/*$("#imagen").click(function(){
 		//recibe parametros de CSS funcion ANIMATE
-		$(this).animate()
+		$(this).animate({
+			marginLeft:"+=150px"
+		},500);
 
+	})*/
+
+	$("img").mouseover(function(){
+		$(this).animate({
+			opacity:1
+		}, 250); //250milisegundos
+	})
+
+	$("img").mouseout(function(){
+		$(this).animate({
+			opacity:0.5
+		}, 250);
 	})
 
 });
